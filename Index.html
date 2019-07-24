@@ -9,19 +9,20 @@
 		<script>
 			
 			// 1 task
+			var userNumber = +prompt('Ведите число?');
 
-			function showTriangle() {
-				var userNumber = +prompt('Ведите число?');
+			function showTriangle(top) {
+				var top = top;
 				var str = '';
 				var res = '';
-				for(var i = userNumber; i > 0 ; i--) {
+				for(var i = top; i > 0 ; i--) {
 					str += '*';
 					res += '\n' + str;	
 				}; 
 				return res
 			}
 
-			alert(showTriangle());
+			alert(showTriangle(userNumber));
 
 
  		
@@ -31,7 +32,7 @@
  				a = a || 2;
  				b = b || 3;
 
- 				if(typeof c == 'function'){
+ 				if(typeof c === 'function'){
  					return c();
  				}
 
