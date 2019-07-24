@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+
+		<script>
+			
+			// 1 task
+
+			function showTriangle() {
+				var userNumber = +prompt('Ведите число?');
+				var str = '';
+				var res = '';
+				for(var i = userNumber; i > 0 ; i--) {
+					str += '*';
+					res += '\n' + str;	
+				}; 
+				return res
+			}
+
+			alert(showTriangle());
+
+
+ 		
+			// 2 task
+			
+ 			function f(c , a , b) {
+ 				a = a || 2;
+ 				b = b || 3;
+
+ 				if(typeof c == 'function'){
+ 					return c();
+ 				}
+
+ 				function sum() {
+ 					return a + b ;
+ 				}
+ 				
+ 				return sum();
+ 			
+ 			}
+
+ 			function test(a, b) {
+ 				a = a || 6;
+ 				b = b || 7;
+ 				return a * b ;
+ 			}
+
+ 			alert(f());
+ 			
+		</script>
+		
+	</body>
+</html>
